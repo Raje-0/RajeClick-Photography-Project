@@ -1,4 +1,4 @@
-package com.raje.uiAspect;
+package com.raje.aspect;
 
 import java.time.Duration;
 import java.time.Instant;
