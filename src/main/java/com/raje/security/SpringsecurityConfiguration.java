@@ -25,10 +25,7 @@ public class SpringsecurityConfiguration {
         .authorizeHttpRequests()
        
 		
-		//rest
-		.requestMatchers("/rest/**").permitAll()
-		.requestMatchers("/question/**").permitAll()
-		.requestMatchers("/quiz/**").permitAll()
+		
 		
 		//UI
 		
