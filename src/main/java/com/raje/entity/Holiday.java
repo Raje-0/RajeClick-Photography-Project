@@ -1,15 +1,26 @@
 package com.raje.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
+@Entity
+@Table(name="holidays")
 public class Holiday extends BaseEntity {
 
-	private String day;
-	private String reason;
-	private Type type;
+    @Id
+    private String day;
 
-	public enum Type {
-		FESTIVAL, FEDERAL
-	}
+    private String reason;
+
+    @Enumerated(EnumType.STRING)
+    private Type type;
+
+    public enum Type {
+        FESTIVAL, FEDERAL
+    }
 }
